@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Getting Started</title>
+    <script>
+        var dojoConfig = {async: true};
+    </script>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/3.42/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.42/"></script>
+
+
+    <!--
+    -- Step: Reference the gettingstarted.css file
+    -->
+    <link rel="stylesheet" href="css/gettingstarted.css">
+
+    <script>
+        /*
+         *  Step: Require the esri/map module and the dojo/domReady! plugin
+         */
+        require(["esri/map", "dojo/domReady!"], function(Map) {
+            var map = new Map ('divMap', { 
+                basemap:'topo',
+                center:[-122.45,37.75],
+                zoom:12 
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+<!--
+-- Step: Create a <div> in which the Map will display
+-->
+<div id = "divMap"></div>
+
+</body>
+</html>
